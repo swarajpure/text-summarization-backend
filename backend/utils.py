@@ -12,7 +12,6 @@ def cleanFileContent():
   text= text[45:]
 
   preprocess_text = text.strip().split("\n\n")
-  print(preprocess_text)
   array = []
   for line in preprocess_text:
     split_text = line.split(":")
