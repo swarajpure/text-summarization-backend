@@ -1,6 +1,10 @@
 import torch
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 
+model = T5ForConditionalGeneration.from_pretrained('t5-small')
+tokenizer = T5Tokenizer.from_pretrained('t5-small')
+device = torch.device('cpu')
+
 def saveFileToServer(file):
   with open('text.txt', 'wb+') as destination:
     for chunk in file.chunks():  
@@ -28,10 +32,6 @@ def cleanFileContent():
   return t5_prepared_Text
 
 def tokenizeAndSummarize(text):
-  model = T5ForConditionalGeneration.from_pretrained('t5-small')
-  tokenizer = T5Tokenizer.from_pretrained('t5-small')
-  device = torch.device('cpu')
-
   tokenized_text = tokenizer.encode(text, return_tensors="pt").to(device)
   # summmarize
   summary_ids = model.generate(tokenized_text,
