@@ -1,1 +1,1 @@
-web: gunicorn limitless-retreat-03369.wsgi --log-file -
+web: gunicorn backend.wsgi --log-file -
