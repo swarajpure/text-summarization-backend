@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-n%jlxi3s&8ner6w%k+o#ntmz0+5*osoctgzz3l$9_w)5z3p&di
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','sampledomain.com', 'limitless-retreat-03369.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1','sampledomain.com', 'limitless-retreat-03369.herokuapp.com', 'https://google-meet-summarization.netlify.app']
 
 
 # Application definition
